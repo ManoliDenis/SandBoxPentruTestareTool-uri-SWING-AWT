@@ -1,8 +1,5 @@
 package PaooGame;
 
-import PaooGame.DataBase.DataManagement.HallofFame;
-import PaooGame.DataBase.DataManagement.PlayerSaves;
-import PaooGame.GameVariables.GameVariables;
 import PaooGame.GameVariables.WindowVariables;
 import PaooGame.GameWindow.GameWindow;
 import PaooGame.Graphics.Assets;
@@ -24,9 +21,7 @@ public class Game implements Runnable {
     private Thread gameThread;
     private BufferStrategy bs;
 
-    // x=-1300 , y=-2200  lvl 1
-    // x=100, y=100 lvl 2
-    // x=-300, y=150 lvl 3
+
     private long oldTranslationTime = System.nanoTime();
     private long currentTranslationTime;
     public static PlayerInput playerInput;
@@ -82,11 +77,6 @@ public class Game implements Runnable {
         wnd.GetCanvas().setFocusable(true);///Canvas is focusable
         wnd.GetCanvas().requestFocus(); ///Set focus on canvas
         wnd.GetCanvas().addKeyListener(playerInput);///Adding the keylistener
-        collisionChecker = new CollisionChecker();///Checks for collisions
-        GameVariables.SAVE_MODULE = new PlayerSaves();///Initializes the SAVEFILES Database
-        GameVariables.HALLOFFAME_MODULE = new HallofFame();///Inits HOF Database
-
-
         sceneManager.levelLoader(sceneManager.levels.Level_3); ///Sets the first level to be rendered which in this case is the Menu
     }
     /// Inits everything it needs, calculates the fps, and based on runstate it updates the logic and graphics

@@ -2,7 +2,7 @@ package PaooGame.Scenes;
 
 import java.awt.*;
 
-public class Menu implements SceneTemplate {
+public class Sandbox implements SceneTemplate {
     @Override
     public void levelUpdate() {
 

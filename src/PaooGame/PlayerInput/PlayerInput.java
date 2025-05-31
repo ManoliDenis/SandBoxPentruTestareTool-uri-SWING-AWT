@@ -47,8 +47,9 @@ public class PlayerInput implements KeyListener {
     }
     @Override
     public void keyTyped(KeyEvent e) {
-        // Not used
-    }///Finally ceva comentat de stefan
+        System.out.println("KeyTyped " + e.getKeyChar());
+
+    }
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -67,8 +68,6 @@ public class PlayerInput implements KeyListener {
         } else if (key == KeyEvent.VK_ESCAPE) {
             escPressed = true;
         }
-
-        updateMovement();
     }
 
     @Override
@@ -87,38 +86,6 @@ public class PlayerInput implements KeyListener {
             enterPressed = false;
         } else if (key == KeyEvent.VK_ESCAPE) {
             escPressed = false;
-        }
-        updateMovement(); // fac fluid movement pentru player
-    }
-
-
-    private void updateMovement() {
-
-        speedX = 0;
-        speedY = 0;
-        Player.isMoving = false;
-
-
-        if (rightPressed) {
-            speedX = -maxSpeed;
-            Player.direction = "right";
-        } else if (leftPressed) {
-            speedX = maxSpeed;
-            Player.direction = "left";
-        }
-
-
-        if (upPressed) {
-            speedY = maxSpeed;
-            Player.direction = "up";
-        } else if (downPressed) {
-            speedY = -maxSpeed;
-            Player.direction = "down";
-        }
-
-
-        if (speedX != 0 || speedY != 0) {
-            Player.isMoving = true;
         }
     }
 }
