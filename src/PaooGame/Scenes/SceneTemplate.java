@@ -5,11 +5,8 @@ import java.awt.*;
 
 
 public interface SceneTemplate {
+    public int GetSceneID();
     public void levelUpdate();
     public void levelInit();
     public void levelDraw(Graphics g);
-
-
-
-
 }

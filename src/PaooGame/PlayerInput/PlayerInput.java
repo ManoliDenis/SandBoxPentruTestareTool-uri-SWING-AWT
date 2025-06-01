@@ -1,7 +1,11 @@
 package PaooGame.PlayerInput;
 
+import PaooGame.GameVariables.WindowVariables;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class PlayerInput implements KeyListener {
     public static Boolean GlobalInputLock = false; ///Folosit pentru blocarea input-ului de la tastatura atunci cand este necesar
@@ -87,5 +91,14 @@ public class PlayerInput implements KeyListener {
         } else if (key == KeyEvent.VK_ESCAPE) {
             escPressed = false;
         }
+    }
+
+    private void registerMouseListener() {
+        WindowVariables.gameWindow.GetCanvas().addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println("MousePressed " + e.getButton());
+            }
+        });
     }
 }

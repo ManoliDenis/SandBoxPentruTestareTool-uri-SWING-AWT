@@ -3,6 +3,13 @@ package PaooGame.Scenes;
 import java.awt.*;
 
 public class Sandbox implements SceneTemplate {
+    int sceneID = 1;
+
+    @Override
+    public int GetSceneID() {
+        return this.sceneID;
+    }
+
     @Override
     public void levelUpdate() {
 

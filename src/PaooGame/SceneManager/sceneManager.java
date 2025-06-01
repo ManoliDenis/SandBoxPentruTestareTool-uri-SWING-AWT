@@ -2,11 +2,14 @@ package PaooGame.SceneManager;
 
 import PaooGame.Scenes.*;
 import PaooGame.Scenes.Menu;
+import PaooGame.Tiles.TilesCollection;
+
 import java.awt.*;
 
 public class sceneManager {
      private static SceneTemplate Scene;
      private static Boolean SceneJL = false;
+     public enum SceneID{Menu, Sandbox}
 
     //This function's scope is to load a level based on an ID
      public static void sceneLoader(int sceneID) {
@@ -22,6 +25,7 @@ public class sceneManager {
      public static void sceneUpdate(Graphics g) {
          try {
              if (SceneJL) {
+                 TilesCollection.loadTiles(Scene.GetSceneID());
                  sceneInit();
                  SceneJL = false;
              } else {
@@ -46,6 +50,14 @@ public class sceneManager {
     //This function's scope is only to return the current scene
      public static SceneTemplate sceneGet(){
          return Scene;
+     }
+    //This function's scope is to only return an integer version of the scene's id
+     public static int sceneName(SceneID scene){
+         switch (scene){
+             case SceneID.Menu -> {return 0;}
+             case SceneID.Sandbox -> {return 1;}
+             default -> throw new IllegalStateException("Unexpected value: " + scene);
+         }
      }
 
 }

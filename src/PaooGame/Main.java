@@ -1,7 +1,6 @@
 package PaooGame;
 
 import PaooGame.GameVariables.WindowVariables;
-import PaooGame.GameWindow.GameWindow;
 
 public class Main
 {
