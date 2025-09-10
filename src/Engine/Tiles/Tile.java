@@ -1,4 +1,4 @@
-package PaooGame.Tiles;
+package Engine.Tiles;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

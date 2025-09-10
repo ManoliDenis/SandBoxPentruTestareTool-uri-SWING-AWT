@@ -1,4 +1,4 @@
-package PaooGame.SceneManager;
+package Engine.SceneManager;
 
 /// sceneManager manages scripts that inherit the SceneTemplate interface , it's only purpose being the management of scenes( aka levels )
 ///  sceneManager functions: sceneLoader(int) loads a scene based on an integer {ex: sceneLoader(0) loads the first Scene inside the switch}
@@ -7,10 +7,10 @@ package PaooGame.SceneManager;
 ///                          sceneName(SceneID) returns an integer representing the index of a level (ex: sceneName(SceneID.Menu) returns 0 )
 /// Last checked: 10/09/2025 4:37PM
 
-import PaooGame.GameVariables.GameSceneIndex;
-import PaooGame.Scenes.*;
-import PaooGame.Scenes.Menu;
-import PaooGame.Tiles.TilesCollection;
+import Engine.GameVariables.GameSceneIndex;
+import Engine.Scenes.*;
+import Engine.Scenes.Menu;
+import Engine.Tiles.TilesCollection;
 
 import java.awt.*;
 

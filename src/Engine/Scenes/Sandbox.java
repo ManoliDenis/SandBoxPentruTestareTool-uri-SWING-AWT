@@ -1,4 +1,4 @@
-package PaooGame.Scenes;
+package Engine.Scenes;
 
 import java.awt.*;
 

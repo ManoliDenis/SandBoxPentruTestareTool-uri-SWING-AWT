@@ -1,6 +1,6 @@
-package PaooGame;
+package Engine;
 
-import PaooGame.GameVariables.WindowVariables;
+import Engine.GameVariables.WindowVariables;
 
 public class Main
 {

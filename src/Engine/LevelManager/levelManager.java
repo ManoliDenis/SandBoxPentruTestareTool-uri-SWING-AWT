@@ -1,6 +1,6 @@
-package PaooGame.LevelManager;
+package Engine.LevelManager;
 
-import PaooGame.SceneManager.sceneManager;
+import Engine.SceneManager.sceneManager;
 
 /// Level manager
 /// 1.Manages levels, switches consecutively between levels

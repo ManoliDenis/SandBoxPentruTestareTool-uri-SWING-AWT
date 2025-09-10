@@ -1,15 +1,15 @@
-package PaooGame;
+package Engine;
 
-import PaooGame.GameVariables.GameSceneIndex;
-import PaooGame.GameVariables.GameVariables;
-import PaooGame.GameVariables.WindowVariables;
-import PaooGame.LevelManager.levelManager;
-import PaooGame.SceneManager.sceneManager;
-import PaooGame.PlayerInput.PlayerInput;
-import PaooGame.GameWindow.GameWindow;
+import Engine.GameVariables.GameSceneIndex;
+import Engine.GameVariables.GameVariables;
+import Engine.GameVariables.WindowVariables;
+import Engine.LevelManager.levelManager;
+import Engine.SceneManager.sceneManager;
+import Engine.PlayerInput.PlayerInput;
+import Engine.GameWindow.GameWindow;
 import java.awt.image.BufferStrategy;
-import PaooGame.Graphics.Assets;
-import PaooGame.Tiles.TilesCollection;
+import Engine.Graphics.Assets;
+import Engine.Tiles.TilesCollection;
 
 import java.awt.*;
 

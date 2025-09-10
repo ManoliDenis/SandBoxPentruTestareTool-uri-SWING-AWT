@@ -1,4 +1,4 @@
-package PaooGame.GameWindow;
+package Engine.GameWindow;
 
 import javax.swing.*;
 import java.awt.*;

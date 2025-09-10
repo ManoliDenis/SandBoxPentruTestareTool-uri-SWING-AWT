@@ -1,6 +1,6 @@
-package PaooGame.GameVariables;
+package Engine.GameVariables;
 
-import PaooGame.Tiles.TilesCollection;
+import Engine.Tiles.TilesCollection;
 
 public class GameVariables {
     public static Boolean DEBUG = false;

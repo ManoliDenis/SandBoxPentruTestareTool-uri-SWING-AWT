@@ -1,6 +1,6 @@
-package PaooGame.GameVariables;
+package Engine.GameVariables;
 
-import PaooGame.GameWindow.GameWindow;
+import Engine.GameWindow.GameWindow;
 
 import java.awt.*;
 

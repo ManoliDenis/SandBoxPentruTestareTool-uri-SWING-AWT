@@ -1,4 +1,4 @@
-package PaooGame.GameVariables;
+package Engine.GameVariables;
 
 import java.util.HashSet;
 import java.util.Set;
