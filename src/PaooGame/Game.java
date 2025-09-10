@@ -1,7 +1,9 @@
 package PaooGame;
 
+import PaooGame.GameVariables.GameSceneIndex;
 import PaooGame.GameVariables.GameVariables;
 import PaooGame.GameVariables.WindowVariables;
+import PaooGame.LevelManager.levelManager;
 import PaooGame.SceneManager.sceneManager;
 import PaooGame.PlayerInput.PlayerInput;
 import PaooGame.GameWindow.GameWindow;
@@ -36,12 +38,14 @@ public class Game implements Runnable {
 
         WindowVariables.gameWindow.BuildGameWindow();
         Assets.Init();
+        GameSceneIndex.GameSceneIndexInit();
         GameVariables.tilesCollection = new TilesCollection();
         playerInput = new PlayerInput();
         WindowVariables.gameWindow.GetCanvas().setFocusable(true);
         WindowVariables.gameWindow.GetCanvas().requestFocus();
         WindowVariables.gameWindow.GetCanvas().addKeyListener(playerInput);
-        sceneManager.sceneLoader(sceneManager.sceneName(sceneManager.SceneID.Menu));
+        //sceneManager.sceneLoader(sceneManager.sceneName(sceneManager.SceneID.Menu));
+        levelManager.ignition();
     }
 
     public void run() {

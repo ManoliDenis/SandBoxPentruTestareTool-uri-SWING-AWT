@@ -19,6 +19,8 @@ public class TilesCollection {
         specialTiles = new ArrayList<>();
     }
 
+
+    //Loads only the necessary tiles for each scene
     public static void loadTiles(int sceneID) {
         switch (sceneID) {
             case 0 -> {/* Do nothing */}

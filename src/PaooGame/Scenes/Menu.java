@@ -7,7 +7,7 @@ public class Menu implements SceneTemplate {
 
     @Override
     public int GetSceneID() {
-        return this.sceneID;
+        return sceneID;
     }
 
     @Override
