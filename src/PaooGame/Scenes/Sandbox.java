@@ -22,6 +22,6 @@ public class Sandbox implements SceneTemplate {
 
     @Override
     public void levelDraw(Graphics g) {
-/// a
+
     }
 }
