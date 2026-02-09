@@ -1,8 +1,7 @@
 package Engine.Tiles;
 
-import java.util.HashMap;
-
 import Engine.Graphics.AssetsManagement.Assets;
+import java.util.HashMap;
 
 
 public class TilesCollection {
@@ -12,11 +11,11 @@ public class TilesCollection {
         Tiles = new HashMap<String,Tile>();
     }
 
-    public static void newTile(String tileName, Assets assets,int id,boolean isSolid,boolean isTriggered,boolean isInteractive)
+    public static void newTile(String tileName, Assets asset,int id,boolean isSolid,boolean isTriggered,boolean isInteractive)
     {
         try
         {
-            Tile temp = new Tile(assets,id,isSolid,isTriggered,isInteractive);
+            Tile temp = new Tile(asset,id,isSolid,isTriggered,isInteractive);
             Tiles.put(tileName, temp);
         }
         catch (Exception e)
@@ -28,7 +27,7 @@ public class TilesCollection {
     public static void loadTiles(int sceneID) { 
         switch (sceneID >= 0) {
             case true -> { 
-                 
+                 //TODO:THINK OF A WAY TO LOAD TILES
 
                 
             }
