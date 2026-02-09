@@ -1,18 +1,18 @@
 package PaooGame.Tiles;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
+import Engine.Graphics.AssetsManagement.Assets;
 
 public class Tile {
-    private final BufferedImage image;
+    private final Assets asset;
     private final int id;
     private final Boolean isSolid;
     private final Boolean isInteractive;
     private Boolean isTriggered;
 
     //This constructor's scope is to set the status for the tile
-    public Tile(BufferedImage image, int id, Boolean isSolid, Boolean isTriggered, Boolean isInteractive) {
-        this.image = image;
+    public Tile(Assets asset, int id, Boolean isSolid, Boolean isTriggered, Boolean isInteractive) {
+        this.asset = asset;
         this.id = id;
         this.isSolid = isSolid;
         this.isTriggered = isTriggered;
@@ -20,13 +20,12 @@ public class Tile {
     }
     //This function's scope is to draw tile starting from position defined by x,y and ending at width and height
     public void Draw(Graphics g, int x, int y,int width,int height) {
-        g.drawImage(image, x, y, width, height, null);
+        g.drawImage(asset.getTexture(), x, y, width, height, null);
     }
 
     public Boolean IsSolid() {
         return isSolid;
     }
-    public Boolean IsTriggered() {return isTriggered;}
     public Boolean IsInteractive() {return isInteractive;}
     public int GetId() {
         return id;

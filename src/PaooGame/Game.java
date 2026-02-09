@@ -6,8 +6,19 @@ import PaooGame.SceneManager.sceneManager;
 import PaooGame.PlayerInput.PlayerInput;
 import PaooGame.GameWindow.GameWindow;
 import java.awt.image.BufferStrategy;
+<<<<<<< Updated upstream:src/PaooGame/Game.java
 import PaooGame.Graphics.Assets;
 import PaooGame.Tiles.TilesCollection;
+=======
+
+import Engine.GameVariables.GameVariables;
+import Engine.GameVariables.WindowVariables;
+import Engine.GameWindow.GameWindow;
+import Engine.Graphics.AssetsManagement.AssetsCollection;
+import Engine.PlayerInput.PlayerInput;
+import Engine.SceneManager.sceneManager;
+import Engine.Tiles.TilesCollection;
+>>>>>>> Stashed changes:src/Engine/Game.java
 
 import java.awt.*;
 
@@ -35,7 +46,7 @@ public class Game implements Runnable {
 
 
         WindowVariables.gameWindow.BuildGameWindow();
-        Assets.Init();
+        AssetsCollection.Init();
         GameVariables.tilesCollection = new TilesCollection();
         playerInput = new PlayerInput();
         WindowVariables.gameWindow.GetCanvas().setFocusable(true);
