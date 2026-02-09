@@ -5,7 +5,6 @@ import java.awt.image.BufferStrategy;
 import Engine.GameVariables.GameVariables;
 import Engine.GameVariables.WindowVariables;
 import Engine.GameWindow.GameWindow;
-import Engine.Graphics.AssetsManagement.Assets;
 import Engine.Graphics.AssetsManagement.AssetsCollection;
 import Engine.PlayerInput.PlayerInput;
 import Engine.SceneManager.sceneManager;
