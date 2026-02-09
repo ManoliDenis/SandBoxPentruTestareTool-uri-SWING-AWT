@@ -1,4 +1,4 @@
-package Engine.Graphics;
+package Engine.Graphics.DataLoadScripts;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -25,4 +25,5 @@ public class ImageLoader
             e.printStackTrace();
         }
         return null;
-    }}
+    }
+}

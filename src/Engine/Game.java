@@ -5,7 +5,8 @@ import java.awt.image.BufferStrategy;
 import Engine.GameVariables.GameVariables;
 import Engine.GameVariables.WindowVariables;
 import Engine.GameWindow.GameWindow;
-import Engine.Graphics.Assets;
+import Engine.Graphics.AssetsManagement.Assets;
+import Engine.Graphics.AssetsManagement.AssetsCollection;
 import Engine.PlayerInput.PlayerInput;
 import Engine.SceneManager.sceneManager;
 import Engine.Tiles.TilesCollection;
@@ -35,7 +36,7 @@ public class Game implements Runnable {
 
 
         WindowVariables.gameWindow.BuildGameWindow();
-        Assets.Init();
+        AssetsCollection.Init();
         GameVariables.tilesCollection = new TilesCollection();
         playerInput = new PlayerInput();
         WindowVariables.gameWindow.GetCanvas().setFocusable(true);

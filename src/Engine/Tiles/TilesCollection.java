@@ -1,6 +1,6 @@
 package Engine.Tiles;
 
-import java.awt.image.BufferedImage;
+import Engine.Graphics.AssetsManagement.Assets;
 import java.util.HashMap;
 
 
@@ -11,11 +11,11 @@ public class TilesCollection {
         Tiles = new HashMap<String,Tile>();
     }
 
-    private static void newTile(String tileName, BufferedImage tileTexture,int id,boolean isSolid,boolean isTriggered,boolean isInteractive)
+    public static void newTile(String tileName, Assets asset,int id,boolean isSolid,boolean isTriggered,boolean isInteractive)
     {
         try
         {
-            Tile temp = new Tile(tileTexture,id,isSolid,isTriggered,isInteractive);
+            Tile temp = new Tile(asset,id,isSolid,isTriggered,isInteractive);
             Tiles.put(tileName, temp);
         }
         catch (Exception e)
