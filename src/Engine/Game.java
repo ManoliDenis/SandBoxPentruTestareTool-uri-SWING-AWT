@@ -79,6 +79,17 @@ public class Game implements Runnable {
         }
     }
 
+    public void render()
+    {
+
+        Graphics2D g2d = (Graphics2D) this.g;
+        g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
+        double zoomFactor = Math.min(WindowVariables.WIDTH / 640.0, WindowVariables.HEIGHT / 360.0);
+        g2d.scale(zoomFactor, zoomFactor);
+
+    }
     private void UpdateEverything() {
         bs = WindowVariables.gameWindow.GetCanvas().getBufferStrategy();
 
@@ -95,6 +106,7 @@ public class Game implements Runnable {
 
         g = bs.getDrawGraphics();
         g.clearRect(0, 0, WindowVariables.gameWindow.GetWndWidth(), WindowVariables.gameWindow.GetWndHeight());
+        render();
         sceneManager.sceneUpdate(g);
         bs.show();
         g.dispose();
