@@ -1,9 +1,7 @@
 package Engine.Scenes;
 
 import java.awt.*;
-
 import Engine.GameVariables.WindowVariables;
-
 
 public class Hub implements SceneTemplate {
 
