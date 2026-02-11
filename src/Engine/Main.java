@@ -10,9 +10,6 @@ public class Main
         SparkPlug.StartGame();
     }
 }
-//Easter-Egg
-
-
 
 
 
