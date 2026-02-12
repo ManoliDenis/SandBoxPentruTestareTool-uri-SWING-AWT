@@ -25,10 +25,9 @@ public class TilesCollection {
     }
 
     public static void loadTiles(int sceneID) { 
-        switch (sceneID >= 0) {
-            case true -> { 
+        switch (sceneID) {
+            case 1 -> { 
                  //TODO:THINK OF A WAY TO LOAD TILES
-
                 
             }
             default -> {System.out.println("Invalid scene ID: " + sceneID);}
